@@ -1,0 +1,348 @@
+:root {--blue: #0094ff}
+* {
+     margin: 0;padding: 0;
+     box-sizing: border-box;
+     font-family: Arial, Helvetica, sans-serif;
+     outline: none;
+     border: none;
+     text-decoration: none;
+     transition: all .3s linear
+}
+::selection {background-color: var(--blue);color: #333}
+html {
+     font-size: 62.5%;
+     overflow-x: hidden;
+     scroll-behavior: smooth
+}
+html::-webkit-scrollbar {width: 1.5rem}
+html::-webkit-scrollbar-track {background: #222}
+html::-webkit-scrollbar-thumb {
+     background: var(--blue);
+     border-radius: 50px
+}
+body {
+     background: #111;
+     overflow-x: hidden;
+     padding-left: 35rem
+}
+section {
+     min-height: 100vh;
+     padding: 1rem
+}
+.btn {
+     padding: .7rem 3rem;
+     background: #333;
+     color: #fff;
+     cursor: pointer;
+     margin-top: 1rem;
+     font-size: 2rem;
+     border-radius: 5rem
+}
+.btn span {
+     padding: 0 .5rem;
+     font-size: 1.8rem
+}
+.btn:hover {background: var(--blue)}
+.heading {
+     text-align: center;
+     margin: 0 6rem;
+     font-size: 4rem;
+     padding: 1rem;
+     border-bottom: .1rem solid #fff4;
+     color: #fff
+}
+.heading span {color: var(--blue)}
+.loader-wrapper {
+     width: 100%;
+     height: 100%;
+     position: fixed;
+     top: 0;
+     left: 0;
+     background: #353b48;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     z-index: 99999
+}
+.loader {
+     border: 16px solid #0094ff80;
+     border-top: 16px solid var(--blue);
+     border-radius: 50%;
+     width: 120px;
+     height: 120px;
+     animation: spin 2s linear infinite
+}
+@keyframes spin {
+     0% {transform: rotate(0deg)}
+     100% {transform: rotate(360deg)}
+}
+.loader-hidden {
+     animation: fadeOut 1s;
+     -webkit-animation: fadeOut 1s;
+     animation-fill-mode: forwards
+}
+@keyframes fadeOut {
+     100% {
+          opacity: 0;
+          visibility: hidden
+     }
+}
+header {
+     position: fixed;
+     top: 0;
+     left: 0;
+     z-index: 1000;
+     height: 100%;
+     width: 35rem;
+     background: #1a1a1a;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-flow: column;
+     text-align: center
+}
+header .user img {
+     height: 17rem;
+     width: 17rem;
+     border-radius: 50%;
+     object-fit: cover;
+     margin-bottom: 1rem;
+     border: .7rem solid var(--blue)
+}
+header .user .name {
+     font-size: 3.5rem;
+     color: white
+}
+header .user .post {
+     font-size: 2rem;
+     color: #eee
+}
+header .navbar {width: 100%}
+header .navbar ul {
+     list-style: none;
+     padding: 1rem 3rem
+}
+header .navbar ul li a {
+     display: block;
+     padding: 1rem;
+     margin: 1.5rem 0;
+     background: #333;
+     color: white;
+     font-size: 2rem;
+     border-radius: 5rem
+}
+header .navbar ul li a:hover {background: var(--blue)}
+#menu {
+     position: fixed;
+     top: 2rem;
+     right: 2rem;
+     background: #333;
+     color: white;
+     cursor: pointer;
+     font-size: 3rem;
+     padding: .5rem 1rem;
+     z-index: 1000;
+     display: none
+}
+#menu span {
+     display: block;
+     width: 24px;
+     height: 3px;
+     background-color: #fff;
+     margin: 6px 0;
+     padding: 0 10px;
+     position: relative;
+     transition: .3s linear
+}
+.home {
+     display: flex;
+     justify-content: center;
+     flex-flow: column;
+     padding: 0 15rem
+}
+.home h3 {
+     font-size: 2.5rem;
+     color: white
+}
+.home h1 {
+     font-size: 5rem;
+     color: white
+}
+.home h1 span {color: var(--blue)}
+.home p {
+     font-size: 2rem;
+     color: #eee;
+     padding: 1rem 0
+}
+.about .row {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-wrap: wrap;
+     padding: 1rem 0
+}
+.about .row .info {
+     flex: 1 1 48rem;
+     padding: 2rem 1rem;
+     padding-left: 6rem
+}
+.about .row .info h2 {
+     font-size: 2rem;
+     color: var(--blue);
+     padding: 1rem 0;
+     font-weight: normal
+}
+.about .row .info h2 span {
+     color: #eee;
+     padding: .5rem
+}
+.about .row .counter {
+     display: flex;
+     flex: 1 1 48rem;
+     justify-content: center;
+     flex-wrap: wrap
+}
+.about .row .counter .box {
+     width: 20rem;
+     background: #222;
+     text-align: center;
+     padding: 2rem;
+     margin: 2rem
+}
+.about .row .counter .box span {
+     font-size: 4rem;
+     color: var(--blue)
+}
+.about .row .counter .box h3 {
+     font-size: 1.5rem;
+     color: #eee
+}
+.about .row .counter .box h3 a {
+     font-size: 1.5rem;
+     color: #eee
+}
+.about .row .counter .box h3 a:hover {color: var(--blue)}
+.portfolio .box-container {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-wrap: wrap;
+     padding: 2rem 0
+}
+.portfolio .box-container .box {
+     height: 20rem;
+     width: 26rem;
+     border-radius: 1rem;
+     margin: 2rem;
+     overflow: hidden;
+     cursor: pointer
+}
+.portfolio .box-container .box img {
+     height: 100%;
+     width: 100%;
+     object-fit: cover
+}
+.portfolio .box-container .box:hover img {transform: scale(1.2)}
+.contact .row {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-wrap: wrap
+}
+.contact .row .content {
+     flex: 1 1 30rem;
+     padding: 4rem;
+     padding-bottom: 0
+}
+.contact .row .content .title {
+     text-transform: uppercase;
+     color: #fff;
+     font-size: 3rem;
+     padding-bottom: 2rem
+}
+.contact .row .content .info h3 {
+     display: flex;
+     align-items: center;
+     font-size: 2rem;
+     color: #eee;
+     padding: 1rem 0;
+     font-weight: normal
+}
+.contact .row .content .info h3 .iconify {
+     padding-right: 1rem;
+     color: var(--blue);
+     font-size: 3.5rem
+}
+.contact .row form {
+     flex: 1 1 45rem;
+     padding: 2rem;
+     margin: 2rem;
+     margin-bottom: 4rem
+}
+.contact .row form .box {
+     padding: 1rem;
+     margin: 1rem 0;
+     background: #333;
+     color: white;
+     text-transform: none;
+     font-size: 1.7rem;
+     width: 100%
+}
+.contact .row form .message {
+     height: 15rem;
+     resize: none
+}
+.contact .row form .box::placeholder {text-transform: capitalize}
+.gotop {
+     position: fixed;
+     bottom: 7.5rem;
+     right: 2rem;
+     z-index: 100;
+     opacity: 0
+}
+.gotop.active {opacity: 1}
+footer {
+     padding: 25px;
+     font-size: 2.5rem;
+     text-align: center;
+     color: #fff
+}
+.sm {margin-top: 10px}
+.sm a {
+     margin: 5px;
+     font-size: 2.5rem;
+     color: white;
+     transition: 0.3s linear;
+}
+.insta:hover {color: #e1306c}
+.yt:hover {color: #ff0000}
+@media screen and (max-width:1200px) {
+     html {font-size: 55%}
+     .home {padding: 1rem 4rem}
+}
+@media screen and (max-width:990px) {
+     header {left: -120%}
+     #menu {display: block}
+     #menu.active span:nth-child(1) {
+          transform: rotate(-45deg);
+          top: 4px;
+          margin-top: 5px
+     }
+     #menu.active span:nth-child(2) {opacity: 0}
+     #menu.active span:nth-child(3) {
+          transform: rotate(45deg);
+          bottom: 14px
+     }
+     header.toggle {left: 0}
+     body {padding: 0}
+}
+@media screen and (max-width:768px) {
+     html {font-size: 50%}
+}
+@media screen and (max-width:400px) {
+     header {width: 100vw}
+     .heading {margin: 0 3rem}
+     .about .row .counter .box {width: 100%}
+     .portfolio .box-container .box {width: 100%}
+     .contact .row form {margin: 3rem 0}
+}
