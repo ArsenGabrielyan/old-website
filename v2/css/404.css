@@ -1,0 +1,12 @@
+*{margin: 0;padding: 0;box-sizing: border-box;font-family: "Montserrat Arm", 'Segoe UI', Tahoma, Geneva, Verdana, ArialHelvetica, sans-serif;text-decoration: none;}
+body{background: linear-gradient(45deg, #002a4f, #0092ff);height: 100vh;}
+.container{position: absolute;top: 10%; left: 10%; right: 10%; bottom: 10%;border-radius: 10px;display: flex;justify-content: center;align-items: center;background: url(../img/p404.png), #121212;background: url(../img/p404.webp), #121212;box-shadow: 0 15px 30px rgba(0,0,0,.5);}
+.container .content{max-width: 600px;text-align: center;}
+.container .content h2, .container .content p{color: #fafafa;}
+.container .content h2{font-size: 18vw;line-height: 1em;}
+.container .content .txt{display: flex;flex-direction: column-reverse;}
+.container .content h1{position: relative;margin-bottom: 20px;color: #121212;background: #fafafa;font-weight: 300;padding: 10px 20px;display: inline-block;}.container .content p{font-size: 1.2em;}
+.container .content a{display: inline-block;padding: 10px 30px;transition:.3s;border:1px solid #0092ff; margin-top: 20px;color: #0092ff;}
+.container .content a:hover{background: #0092ff; color: #121212;}
+@media screen and (max-width: 500px){.container .content{padding: 20px;}.container .content h2{font-size: 30vw;}.container .content h1{font-size: 20px;}.container .content p{font-size: 1em;}.container .content a{width: 100%;}}
+@media (prefers-reduced-motion:reduce){.container .content a{transition: none;}}
